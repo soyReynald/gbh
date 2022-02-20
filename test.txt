@@ -1,0 +1,11 @@
+Se desea calcular cuál carro es el primero,
+se determinará tomando en cuenta que el primero es el más rápido.
+
+Se aceptan KM/H
+Se aceptan Millas
+
+Tiempo para completar: 25 minutos.
+
+Ejemplo:
+program(vehicles)
+// El carro más veloz es el de Reynald Ramirez
