@@ -1,16 +1,16 @@
 const testVehicles = [
     { conductor: "Juan", speed: 3000, velocityType: "km/h" },
     { conductor: "Reynald", speed: 300, velocityType: "km/h" },
-    { conductor: "Jose", speed: 2000, velocityType: "mph" },
+    { conductor: "Jose", speed: 5000, velocityType: "mph" },
+    { conductor: "Francisco", speed: 1000, velocityType: "km/h" },
 ];
 
 const program = (vehicles) => {
     let firstVehicle = {};
     firstVehicle.speed = 0;
     vehicles.map((vehicle) => {
-        if (vehicle.type === "mph") {
-            vehicle.speed = vehicle.speed * 0.621371;
-        }
+        const factor = vehicle.velocityType === "km/h" ? 1 : 0.621371; // This can be extended to other units
+        vehicle.speed = vehicle.speed * factor;
         if (vehicle.speed > firstVehicle?.speed) {
             firstVehicle = vehicle;
         }
